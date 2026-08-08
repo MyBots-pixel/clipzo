@@ -867,3 +867,351 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* =====================================================
+   CLIPZO AUTH PAGES
+   ===================================================== */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(124, 92, 255, 0.16),
+            transparent 45%
+        ),
+        var(--background);
+}
+
+
+/* ==========================================
+   AUTH CONTAINER
+   ========================================== */
+
+.auth-container {
+    width: 100%;
+    max-width: 430px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ==========================================
+   AUTH BRAND
+   ========================================== */
+
+.auth-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   AUTH CARD
+   ========================================== */
+
+.auth-card {
+    width: 100%;
+
+    padding: 34px;
+
+    background: var(--background-secondary);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.auth-card h1 {
+    font-size: 27px;
+
+    text-align: center;
+
+    margin-bottom: 8px;
+}
+
+.auth-subtitle {
+    color: var(--text-secondary);
+
+    text-align: center;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* ==========================================
+   FORM
+   ========================================== */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(124, 92, 255, 0.12);
+}
+
+.form-group input::placeholder {
+    color: var(--text-secondary);
+}
+
+
+/* ==========================================
+   PASSWORD LABEL
+   ========================================== */
+
+.password-label {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.password-label button {
+    border: none;
+
+    background: transparent;
+
+    color: var(--accent);
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   FORGOT PASSWORD
+   ========================================== */
+
+.forgot-row {
+    text-align: right;
+
+    margin-top: -7px;
+
+    margin-bottom: 20px;
+}
+
+.forgot-row a {
+    color: var(--accent);
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+.forgot-row a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   LOGIN BUTTON
+   ========================================== */
+
+.auth-button {
+    width: 100%;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.auth-button:hover {
+    background: var(--accent-hover);
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   DIVIDER
+   ========================================== */
+
+.auth-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 24px 0;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: var(--border);
+}
+
+
+/* ==========================================
+   CREATE ACCOUNT
+   ========================================== */
+
+.create-account-button {
+    width: 100%;
+
+    height: 46px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.create-account-button:hover {
+    background: var(--card-hover);
+
+    border-color: var(--accent);
+}
+
+
+/* ==========================================
+   TERMS
+   ========================================== */
+
+.auth-terms {
+    margin-top: 22px;
+
+    color: var(--text-secondary);
+
+    text-align: center;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   BACK LINK
+   ========================================== */
+
+.back-link {
+    margin-top: 20px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--text);
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 500px) {
+
+    .auth-card {
+        padding: 25px 20px;
+    }
+
+    .auth-card h1 {
+        font-size: 24px;
+    }
+
+}

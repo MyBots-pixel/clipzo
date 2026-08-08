@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login • Clipzo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <!-- Logo -->
+
+        <a href="index.html" class="auth-brand">
+            <div class="logo">C</div>
+            <span>Clipzo</span>
+        </a>
+
+
+        <!-- Login Card -->
+
+        <div class="auth-card">
+
+            <h1>Welcome back</h1>
+
+            <p class="auth-subtitle">
+                Log in to continue to Clipzo
+            </p>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                >
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="form-group">
+
+                <div class="password-label">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <button
+                        type="button"
+                        id="showPassword"
+                    >
+                        Show
+                    </button>
+
+                </div>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                >
+
+            </div>
+
+
+            <!-- Forgot password -->
+
+            <div class="forgot-row">
+
+                <a href="#" id="forgotPassword">
+                    Forgot password?
+                </a>
+
+            </div>
+
+
+            <!-- Login -->
+
+            <button
+                class="auth-button"
+                id="loginSubmit"
+            >
+                Log in
+            </button>
+
+
+            <!-- Divider -->
+
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+
+
+            <!-- Create account -->
+
+            <button
+                class="create-account-button"
+                id="createAccount"
+            >
+                Create a Clipzo account
+            </button>
+
+
+            <p class="auth-terms">
+                By continuing, you agree to Clipzo's
+                Terms of Service and Privacy Policy.
+            </p>
+
+        </div>
+
+
+        <!-- Back -->
+
+        <a href="index.html" class="back-link">
+            ← Back to Clipzo
+        </a>
+
+    </div>
+
+
+    <script>
+
+        // ==========================================
+        // SHOW / HIDE PASSWORD
+        // ==========================================
+
+        const password =
+            document.getElementById("password");
+
+        const showPassword =
+            document.getElementById("showPassword");
+
+        showPassword.addEventListener("click", () => {
+
+            if (password.type === "password") {
+
+                password.type = "text";
+                showPassword.textContent = "Hide";
+
+            } else {
+
+                password.type = "password";
+                showPassword.textContent = "Show";
+
+            }
+
+        });
+
+
+        // ==========================================
+        // LOGIN
+        // ==========================================
+
+        const loginSubmit =
+            document.getElementById("loginSubmit");
+
+        loginSubmit.addEventListener("click", () => {
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const passwordValue =
+                password.value;
+
+            if (!email || !passwordValue) {
+
+                alert(
+                    "Please enter your email and password."
+                );
+
+                return;
+            }
+
+            alert(
+                "Real Clipzo login will be connected soon!"
+            );
+
+        });
+
+
+        // ==========================================
+        // CREATE ACCOUNT
+        // ==========================================
+
+        document
+            .getElementById("createAccount")
+            .addEventListener("click", () => {
+
+                window.location.href =
+                    "signup.html";
+
+            });
+
+
+        // ==========================================
+        // FORGOT PASSWORD
+        // ==========================================
+
+        document
+            .getElementById("forgotPassword")
+            .addEventListener("click", (event) => {
+
+                event.preventDefault();
+
+                alert(
+                    "Password recovery will be connected when we add Clipzo Accounts."
+                );
+
+            });
+
+    </script>
+
+</body>
+</html>
